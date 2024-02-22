@@ -66,6 +66,7 @@ public class ParkingLot {
 		int currentCarIndex = 0;
 		for (int i = 0; i < cars.length; i++) {
 			if (cars[i] != null) {
+				// consider doing value by value copy instead of reference by reference
 				storedCars[currentCarIndex++] = cars[i];
 			}
 		}
