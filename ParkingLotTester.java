@@ -41,6 +41,10 @@ public class ParkingLotTester {
 		gottenCars = parkingLot.getCars();
 
 		parkingLot.showCars(gottenCars);
+
+		parkingLot.addCar(car5);
+		gottenCars = parkingLot.getCars();
+		parkingLot.showCars(gottenCars);
 	}
 
 }

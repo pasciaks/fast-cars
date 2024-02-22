@@ -34,9 +34,19 @@ public class ParkingLot {
 		}
 	}
 
+	// Improved addCar to use 'slot' basis instead of 'index' basis
 	public void addCar(Car car) {
-		this.cars[numberOfCars] = car;
-		numberOfCars++;
+		if (numberOfCars >= MAX_CARS) {
+			System.out.println("Parking lot is full");
+			return;
+		}
+		for (int i = 0; i < cars.length; i++) {
+			if (cars[i] == null) {
+				cars[i] = car;
+				numberOfCars++;
+				return;
+			}
+		}
 	}
 
 	public void showCars(Car[] cars) {
